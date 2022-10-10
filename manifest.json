@@ -1,0 +1,19 @@
+{
+  "name": "CPU usage trend",
+  "description": "CPU usage trend",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "main.html"
+  },
+  "permissions": ["storage", "activeTab", "system.cpu", "system.memory", "system.storage"] 
+}
