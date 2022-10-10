@@ -1,7 +1,6 @@
 import { getSystemInfo } from './utils'
 
-getSystemInfo(({ cpu: { modelName, usage } }) => {
-  console.log({ usage })
+getSystemInfo(({ cpu: { modelName, usage } }) => {  
   const idle =
     usage.reduce(
       (prevValue, currValue) => prevValue + currValue.idle / currValue.total,
