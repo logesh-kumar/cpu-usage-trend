@@ -33,9 +33,7 @@ interface SystemInfoData {
   }
 }
 
-
-
-export async function getSystemInfo(  
+export async function getSystemInfo(
   cb: (data: SystemInfoData) => void,
   processorsOld: chrome.system.cpu.ProcessorUsage[] = []
 ) {
@@ -60,3 +58,4 @@ export async function getSystemInfo(
     getSystemInfo(cb, processors)
   }, TIMEOUT)
 }
+

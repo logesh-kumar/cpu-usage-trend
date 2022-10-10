@@ -12,10 +12,16 @@ export default defineConfig({
         offline_enabled: true,
         background: {
           service_worker: 'src/background.ts',
-        },
+        },        
+        content_scripts: [
+          {
+            matches: ['<all_urls>'],
+            js: ['src/content.ts'],
+            run_at: 'document_start',
+          },
+        ],
         permissions: [
-          'system.cpu',
-          'system.memory',
+          'system.cpu',          
           'system.storage',
           'storage',
         ],
