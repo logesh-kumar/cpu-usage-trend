@@ -1,7 +1,7 @@
 # cpu-usage-trend
 
-Background.ts - gets cpu usage metrics and passes to content.ts
-Content.ts - Save the cpu metrics in indexdb 
+- Background.ts - gets cpu usage metrics and passes to content.ts
+- Content.ts - Save the cpu metrics in indexdb 
 
 
 # To install the extension,  
